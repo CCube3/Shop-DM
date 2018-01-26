@@ -1,0 +1,777 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>${global.pageName}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <style type="text/css">
+        body{width:100% !important;background-color:#fff;padding:0;margin:0}
+        a,a.aapl-link,a.aapl-link:link{text-decoration:none;cursor:pointer}
+        table#aapl-eyebrow a,table#aapl-footer,.aapl-container a,#aapl-footer a,a{color:inherit; text-decoration: none}
+        #mobile-top section, #mobile-bottom section{mso-hide:all}
+        .show_me_always{visibility:visible}
+        #desktop table td button{font-size:0 !important}
+        table,td{overflow:hidden !important}
+        b{font-weight: 400 !important}
+        sup{vertical-align:text-top;font-size:smaller;line-height:normal}
+
+        @media only screen and (max-device-width:768px){
+            *{text-rendering:optimizelegibility}
+            body{-webkit-text-size-adjust:110%}
+            td{line-height:1.3em;overflow:hidden !important}
+            .aapl-container{-webkit-text-size-adjust:106%;line-height: 1.2em !important;padding-left:28px !important;padding-right:28px !important}
+            #aapl-footer{-webkit-text-size-adjust:120%;line-height:1.2em !important}
+        }
+
+        @media only screen and (max-device-width:568px){
+            #desktop{display:none !important}
+            #mobile-top{width:100% !important;max-width:100% !important;background:#fff;max-height:none !important;float:none !important;overflow:visible !important;height:inherit !important;display:block !important;margin:0 auto !important}
+            #mobile-bottom{width:100% !important;max-width:100% !important;max-height:none !important;float:none !important;overflow:visible !important;height:inherit !important;display:block !important;margin:0 auto !important}
+            #mobile-wrapper{width:100% !important;max-width:100% !important;background:#fff;max-height:none !important;float:none !important;overflow:visible !important;height:inherit !important;display:block !important;margin:0 auto !important}
+            html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time{margin:0;padding:0}
+            h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th,figcaption{font-size:1em;font-weight:normal;font-style:normal}
+            th{text-align:left}
+            table{border-collapse:collapse;border-spacing:0;overflow:hidden !important}
+            article,aside,footer,header,hgroup,nav,section,figure,figcaption{display:block}
+            body{background-color:#f2f2f2;min-width:320px !important}
+            /* mobile layout */
+            .mobile{width:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;font-size:18px;line-height:1.4em;font-weight:400;letter-spacing:0;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;text-rendering:optimizelegibility;background-color:#fff}
+            .mobile img{display:block;background-position:50% 0;background-repeat:no-repeat;background-size:100% 100%}
+            .mobile img.more{display:inline-block;margin:0}
+            .mobile .m-ctr, .mobile .m-ctr img{margin:0 auto;text-align:center;}
+            .mobile a{color:#0070c9;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0.3)}
+            .mobile .dark a{color:#555}
+            .mobile a:hover{text-decoration:underline}
+            .mobile div.body{width:100% !important;float:none !important;overflow:hidden;position:relative;margin:0 auto;background-color:#fff}
+            .mobile-bottom{background-color:#f2f2f2}
+            .mobile-bottom div.body{padding-top:0;background-color:#f2f2f2}
+            .mobile-bottom div.body p{padding:0}
+            .mobile .divider{border-top:1px solid #d6d6d6;margin:3px 0 5px}
+            .mobile .divider.divider-footer{margin:0}
+            .mobile .m-apple-logo{padding-bottom:21px;margin-left:6.25%;text-align:left}
+            .mobile .m-apple-logo img{margin:0}
+            .mobile .m-center, .mobile .m-center img{margin:0 auto;text-align:center}
+            .mobile .m-copy{text-align:center !important;line-height:1.44em;font-size: 18px}
+            .mobile .m-copy-small{text-align:center !important;line-height:1.45em;font-size: 12px}
+            .mobile .m-copy-small .m-italic{font-style:italic}
+            .mobile .m-apple-tv-s,
+            .mobile .m-f2f1f6{background-color:#f2f1f6}
+            .mobile .m-fff{background-color:#fff}
+            .mobile .m-head-wrapper{margin:0 auto;padding-top:15px;background-color:#f2f1f6}
+            .mobile .m-content-body{max-width:340px;margin:0 auto;text-align:left}
+            .mobile .m-storeapp img{margin:0 auto}
+            .mobile .m-only-apple{font-size:14px;line-height:1.5;color:#e85d00;text-align:center}
+            .mobile .m-h-s{max-width:414px;margin:0 auto 42px}
+            .mobile .m-h-bg {position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;height:366px}
+            .mobile .m-h-img-container {position:relative}
+            .mobile .m-h-s .m-content-hero{padding-top:2px}
+            .mobile .m-h-s .m-content-hero .m-h-hl{padding-bottom:14px}
+            .mobile .m-h-s .m-h-cta-button{padding-top:30px}
+            .mobile .m-h-s .m-h-cta{padding-top:13px}
+            .mobile .m-h-s .m-h-cta-mid{padding-top:7px}
+            .mobile .m-h-s .m-h-find{padding-top:13px;padding-bottom:33px}
+            .mobile .m-h-s .m-h-cta-sm{font-size:12px}
+            .mobile .m-h-s .m-h-cta-sm a{color:#555}
+            .mobile .m-h-s .m-h-cta-last{padding-top:11px;padding-bottom:34px}
+            .mobile .m-content-watch {padding-top:8px}
+            .mobile .m-w-s {max-width:414px;margin:0 auto}
+            .mobile .m-w-s .m-w-img-container{padding:0;margin:0}
+            .mobile .m-w-s .divider{width:90%;margin:0 auto;padding-top:0;padding-bottom:53px}
+            .mobile .m-w-s .m-w-logo-hl{padding-top:87px;padding-bottom:28px}
+            .mobile .m-w-s .m-w-cta{padding-top:14px}
+            .mobile .m-w-s .m-w-cta-last{padding-top:7px;padding-bottom:27px}
+            .mobile .m-stoc-s {text-align:center}
+            .mobile .m-stoc-s .m-stoc-hl{padding-top:28px;padding-bottom:36px}
+            .mobile .m-stoc-s .m-stoc-copy{display:block;color:#333}
+            .mobile .m-stoc-s .m-stoc-copy a{color:#333}
+            .mobile .m-stoc-s .m-stoc-link {display:inline-block;margin-bottom:15px}
+            .mobile .m-stoc-s .m-v-copy{display:block;color:#e85d00;font-size:12px;line-height:1em;letter-spacing:-0.06em;padding-bottom:12px}
+            .mobile .m-stoc-s .m-aps-s{margin-bottom:8px;padding-top:10px;padding-bottom:35px}
+            .mobile .m-aps-s .m-aps-img{padding-bottom:42px}
+            .mobile .m-aps-s .m-aps-cta{padding-top:10px;padding-bottom:8px}
+            .mobile .m-stoc-s .m-c-b-s{margin-bottom:8px;padding-top:11px;padding-bottom:35px}
+            .mobile .m-c-b-s .m-c-b-img{padding-bottom:8px}
+            .mobile .m-c-b-s .m-c-b-cta{padding-top:14px;padding-bottom:6px}
+            .mobile .m-stoc-s .m-dji-s{margin-bottom:8px;padding-top:13px;padding-bottom:35px}
+            .mobile .m-dji-s .m-dji-img{padding-bottom:44px}
+            .mobile .m-dji-s .m-dji-cta{padding-top:20px;padding-bottom:8px}
+            .mobile .m-stoc-s .m-r2d2-s{margin-bottom:8px;padding-top:10px;padding-bottom:35px}
+            .mobile .m-r2d2-s .m-r2d2-img{padding-top:1px;padding-bottom:12px}
+            .mobile .m-r2d2-s .m-only-apple{padding-bottom:8px}
+            .mobile .m-r2d2-s .m-r2d2-cta{padding-top:20px;padding-bottom:8px}
+            .mobile .m-stoc-s .m-ue-s{margin-bottom:8px;padding-top:14px;padding-bottom:35px}
+            .mobile .m-ue-s .m-ue-img{padding-top:1px;padding-bottom:38px}
+            .mobile .m-ue-s .m-ue-cta{padding-top:19px;padding-bottom:7px}
+            .mobile .m-stoc-s .m-lp-s{margin-bottom:8px;padding-top:21px;padding-bottom:35px}
+            .mobile .m-lp-s .m-lp-img{padding-top:1px}
+            .mobile .m-lp-s .m-lp-cta{padding-top:19px;padding-bottom:8px}
+            .mobile .m-g-s{max-width:414px;margin:0 auto 40px;background-color:#f2f1f6}
+            .mobile .m-g-s .m-g-hl,
+            .mobile .m-g-s .m-ct-gift{max-width:414px;background-color:#f2f1f6;margin:0 auto;box-sizing:border-box;padding-bottom:3px}
+            .mobile .m-g-s .m-g-hl{padding-top:9px;padding-bottom:18px}
+            .mobile .m-g-s .m-ct-gift .m-g-cta{letter-spacing:-0.03em;padding-bottom:17px;padding-left:2px}
+            .mobile .m-ins-sec{max-width:414px;margin:0 auto}
+            .mobile .m-ins-sec .m-ins-hdln{padding-top:57px;padding-left:2px;padding-bottom:22px;}
+            .mobile .m-ins-sec .m-ins-icn-sec{padding-left:24px;margin:0 auto;padding-bottom:70px;}
+            .mobile .m-ins-sec .m-ins-icn-sec .m-ins-box{padding-bottom:7px;display:table;}
+            .mobile .m-ins-sec .m-ins-icn-sec .m-ins-box .m-ins-cp{display:table-cell;vertical-align:middle;padding-left:18px;padding-bottom:2px;}
+            .mobile .m-ins-sec .m-ins-icn-sec .m-ins-box .m-ins-cp a{font-size:16px;color:#333;}
+            .mobile .m-bs{background-color:#f2f2f2;padding-left:24px;padding-right:24px}
+            .mobile .m-bs .m-bs-shead{padding-bottom:10px}
+            .mobile .m-bs .m-bs-copy{padding-right:1.1em;font-size:14px;line-height:1.429}
+            .mobile .m-bs .m-bs-app{padding-top:40px}
+            .mobile .m-bs .m-bs-app .m-bs-copy{padding-bottom:15px}
+            .mobile .m-bs .m-bs-app .m-bs-shead{position:relative;left:-1px}
+            .mobile .m-bs .m-bs-d{padding-top:30px}
+            .mobile .m-bs .m-bs-d .m-bs-icon{padding-left:2px}
+            .mobile .m-bs .m-bs-d .m-bs-shead{position:relative;left:-1px;padding-bottom:11px}
+            .mobile .m-bs .m-bs-d .m-bs-copy{padding-bottom:8px}
+            .mobile .m-bs .m-bs-store{padding-top:30px; padding-bottom:38px}
+            .mobile .m-bs .m-bs-store .m-bs-shead{position:relative;top:-3px;left:-1px;padding-bottom:10px}
+            .mobile .m-bs .m-bs-store .m-bs-copy{line-height: 1.45em;padding-bottom:9px}
+            .mobile .m-stoc-s,
+            .mobile .m-ins-s,
+            .mobile .m-bs .m-bs-tile,
+            .mobile .aapl-footer{max-width:414px !important;margin:0 auto}
+            .mobile .m-h-img img,
+            .mobile .m-w-img img{width:100%}
+            .mobile .m-h-img {position:relative;z-index:2;background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_hero_2x.jpg") no-repeat center center transparent;-webkit-background-size:568px 516px;background-size:568px 516px;width:100%;height:516px}
+            .mobile .m-h-hl {background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_headline_2x.png") no-repeat center center #f2f1f6;-webkit-background-size:414px 162px;background-size:414px 162px;width:100%;height:162px}
+
+            .mobile .m-aps-img{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_airpods_2x.jpg") no-repeat top center;-webkit-background-size:414px 332px;background-size:414px 332px;width:100%;height:332px}
+            .mobile .m-c-b-img{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_classic_buckle_2x.jpg") no-repeat top center;-webkit-background-size:414px 332px;background-size:414px 332px;width:100%;height:332px}
+            .mobile .m-dji-img{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_dji_spark_combo_2x.jpg") no-repeat top center;-webkit-background-size:414px 332px;background-size:414px 332px;width:100%;height:332px}
+            .mobile .m-r2d2-img{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_pinwheel_01_2x.jpg") no-repeat top center;-webkit-background-size:320px 332px;background-size:320px 332px;width:100%;height:332px}
+            .mobile .m-ue-img{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_pinwheel_05_2x.jpg") no-repeat top center;-webkit-background-size:320px 332px;background-size:320px 332px;width:100%;height:332px}
+            .mobile .m-lp-img{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_liteprint_2x.jpg") no-repeat top center;-webkit-background-size:414px 332px;background-size:414px 332px;width:100%;height:332px}
+
+            .mobile .m-g-img-1{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_imagination_top_2x.jpg") no-repeat top center;-webkit-background-size:414px 220px;background-size:414px 158px;width:100%;height:158px}
+            .mobile .m-g-img-2{background:url("https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_imagination_bottom_2x.jpg") no-repeat top center;-webkit-background-size:414px 146px;background-size:414px 146px;width:100%;height:146px}
+            .mobile .aapl-footer{color:#888;padding:2px 6.25% 0;background:#f2f2f2}
+            .mobile .aapl-footer a{color:#888;text-decoration:none;white-space: nowrap}
+            .mobile .aapl-lowbrow{font-size:11px;padding:5px 0  6px;text-align:center}
+            .mobile .aapl-lowbrow span{padding:0 6px}
+            .mobile .aapl-lowbrow span.format-detection{padding:0}
+            .mobile .aapl-legal{font-size:11px;line-height:1.5;padding:5px 0 29px 1px;text-align:left}
+            .mobile .aapl-legal .sosumi{line-height:1.67;padding-bottom:17px}
+            .mobile .aapl-legal a{color:#555}
+            .mobile .aapl-legal span.vert{padding:0 6px;color:#d6d6d6}
+            .mobile .aapl-footer .subtle-link{color:#888;padding:0}
+            .mobile .aapl-footer .subtle-link{color:#888;padding:0;margin:0;display:inline}
+            .mobile .aapl-footer .subtle-link a{color:#888}
+            .mobile .vertical-spacer{color:#d6d6d6}
+            .mobile .rag br{display:none}
+            .mobile .m-app-s {margin-bottom:7px;text-align:center}
+            .mobile .m-iphone-s{background-color:#fff;margin-bottom:7px}
+            .mobile .m-preorder-s{padding-bottom:44px}
+       }
+        @media only screen and (max-device-width: 320px){
+            .mobile .rag{width:initial}
+            .mobile .rag br{display:block}
+            .m-keyboard-position{margin-left:-47px}
+        }
+        @media screen and (device-aspect-ratio: 40/71){
+            .mobile .m-bs .m-bs-copy{padding-right:0}
+        }
+        .gmailfix{
+            display:none;
+            display:none!important;
+        }
+    </style>
+    <!--[if gte mso 9]>
+        <style type="text/css">
+            table,td,div,p{font-family:'Segoe UI Light','Helvetica Neue','Helvetica','Arial',sans-serif !important;line-height:normal!important}
+        </style>
+    <![endif]-->
+    <!--[if lte mso 7]>
+        <style type="text/css">
+            table,td,div,p{font-family:'Segoe UI Light','Helvetica Neue','Helvetica','Arial',sans-serif !important;line-height:normal !important}
+        </style>
+    <![endif]-->
+</head>
+<body style="margin:0; padding:0">
+    <div style="position:absolute;max-height:0;font-size:0">${global.trackWebOpen}</div>
+    <div id="mobile-top" class="mobile mobile-top" style="width:0;height:0;max-height:0;float:left;overflow:hidden;display:none">
+        <div class="body">
+            <section class="m-h-s">
+                <div class="m-head-wrapper m-f2f1f6"><p class="m-apple-logo" style="padding-top:5px"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/apple_888_alpha_2x.png" width="20" height="24" alt="" border="0"></p></div>
+                <div class="m-content-hero m-f2f1f6"><div class="m-h-hl m-center"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" class="more" width="414" height="162" style="display:block" border="0" alt="Last-minute shopping. Top-of-the-list gifts."></div><div class="m-copy m-h-copy m-h-copy-first">Free next-day delivery on<br />in-stock items ordered by<br />3:00 p.m. on December 22.<sup>*</sup></div><div class="m-h-cta-button m-center"><a href="${clicks.get('M_MAIN_GIFTGUIDE_BUTTON')}" style="display:inline-block;text-decoration:none"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_shop_button_2x.jpg" class="more" width="209" height="34" style="display:block;margin:auto" border="0" alt="Shop last-minute gifts"></a></div><div class="m-copy m-h-copy m-h-find m-f2f1f6"><span><a href="${clicks.get('M_MAIN_FINDSTORE_LINK')}" class="aapl-link " style="border:0;outline:0">Find a store<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" border="0" alt="" style="border:0;outline:0"></a></span></div></div><div class="m-h-img-container hero-img"><div class="m-h-img"><a href="${clicks.get('M_ATV_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="516" alt="Apple TV 4K" border="0" style="display:block;margin:0 auto"></a></div></div><div class="m-content-hero m-fff"><div class="m-copy m-h-copy">A picture-perfect gift<br />sharp to the last pixel.<br />Starting at $179</div><div class="m-copy m-h-copy m-h-cta"><span><a href="${clicks.get('M_ATV_LINK')}" class="aapl-link " style="border:0;outline:0">Buy Apple TV 4K<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" border="0" alt="" style="border:0;outline:0"></a></span></div><div class="m-copy m-h-copy m-h-cta-mid"><span><a href="${clicks.get('M_ATV_ACC_LINK')}" class="aapl-link " style="border:0;outline:0">Shop Apple TV accessories<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" border="0" alt="" style="border:0;outline:0"></a></span></div><div class="m-copy m-h-copy m-h-cta m-h-cta-sm m-h-cta-last"><span><a href="${clicks.get('M_DESP3_LINK')}" class="aapl-link " style="border:0;outline:0"><i>Despicable Me 3</i> is available on iTunes<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_333_alpha_2x.png" class="more" width="12" height="8" border="0" alt="" style="border:0;outline:0"></a></span></div></div>
+            </section>
+            <section class="m-w-s">
+                <div class="m-w-img-container"><div class="m-w-img"><a href="${clicks.get('M_WATCH_IMAGE')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_watch_lte_2x.jpg" class="top" style="display:block;margin:0 auto" border="0" alt="Apple Watch Series 3"></a></div></div><div class="m-content-watch"><div class="m-copy m-w-copy">Give a gift that gets them going.</div><div class="m-copy m-w-copy m-w-cta"><span><a href="${clicks.get('M_WATCH_LINK')}" class="aapl-link " style="border:0;outline:0">Shop Apple Watch<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" border="0" alt="" style="border:0;outline:0"></a></span></div><div class="m-copy m-w-copy m-w-cta m-w-cta-last"><span><a href="${clicks.get('M_WATCH_ACC_LINK')}" class="aapl-link" style="border:0;outline:0">Shop bands<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" border="0" alt="" style="border:0;outline:0"></a></span></div></div>
+            </section>
+            <section class="m-stoc-s" align="left">
+                <div class="m-stoc-hl m-center"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_gifts_title_2x.png" class="more" width="258" height="23" style="display:block" border="0" alt="Gifts for every stocking."></div>
+                    <div class="m-aps-s m-f2f1f6"><div class="m-aps-img"><a href="${clicks.get('M_AIRPODS_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="332" alt="" border="0" style="display:block;margin:0 auto"></a></div><a href="${clicks.get('M_AIRPODS_LINK')}" class="m-copy m-stoc-copy m-stoc-link m-aps-copy">AirPods</a><div class="m-copy m-stoc-copy"><a href="${clicks.get('M_AIRPODS_PRICE')}">$159.00</a></div></div>
+                    <div class="m-c-b-s m-f2f1f6"><div class="m-c-b-img"><a href="${clicks.get('M_BUCKLE_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="332" alt="" border="0" style="display:block;margin:0 auto"></a></div><a href="${clicks.get('M_BUCKLE_LINK')}" class="m-copy m-stoc-copy m-c-b-copy m-stoc-link">Classic Buckle</a><div class="m-copy m-stoc-copy"><a href="${clicks.get('M_BUCKLE_PRICE')}">$149.00</a></div></div>
+                    <div class="m-dji-s m-f2f1f6"><div class="m-dji-img"><a href="${clicks.get('M_DJISPARKCOMBO_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="332" alt="" border="0" style="display:block;margin:0 auto"></a></div><a href="${clicks.get('M_DJISPARKCOMBO_LINK')}" class="m-copy m-stoc-copy m-dji-copy m-stoc-link">DJI Spark Drone<br />Fly More Combo</a><div class="m-copy m-stoc-copy"><a href="${clicks.get('M_DJISPARKCOMBO_PRICE')}">$599.95</a></div></div>
+                    <div class="m-r2d2-s m-f2f1f6"><div class="m-r2d2-img"><a href="${clicks.get('M_R2D2_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="332" alt="" border="0" style="display:block;margin:0 auto"></a></div><a href="${clicks.get('M_R2D2_LINK')}" class="m-copy m-stoc-copy m-r2d2-copy m-stoc-link">Sphero R2-D2</a><div class="m-copy m-stoc-copy"><a href="${clicks.get('M_R2D2_PRICE')}">$129.95</a></div></div>
+                    <div class="m-ue-s m-f2f1f6"><div class="m-ue-img"><a href="${clicks.get('M_UE_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="332" alt="" border="0" style="display:block;margin:0 auto"></a></div><a href="${clicks.get('M_UE_LINK')}" class="m-copy m-stoc-copy m-ue-copy m-stoc-link">UE Wonderboom<br />Speaker</a><div class="m-copy m-stoc-copy"><a href="${clicks.get('M_UE_PRICE')}">$99.95</a></div></div>
+                    <div class="m-lp-s m-f2f1f6"><div class="m-lp-img"><a href="${clicks.get('M_LIFEPRINT_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="100%" height="332" alt="" border="0" style="display:block;margin:0 auto"></a></div><div class="m-copy m-stoc-copy m-v-copy">Only at Apple</div><a href="${clicks.get('M_LIFEPRINT_LINK')}" class="m-copy m-stoc-copy m-lp-copy m-stoc-link">Lifeprint 3x4.5 Photo and<br />Video Printer</a><div class="m-copy m-stoc-copy"><a href="${clicks.get('M_LIFEPRINT_PRICE')}">$149.95</a></div></div>
+            </section>
+            <section class="m-g-s">
+                <div class="m-g-img-1-container"><div class="m-g-img-1"><a href="${clicks.get('M_GIFTGUIDE_IMG')}"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="414" height="158" alt="" border="0" style="display:block;margin:0 auto"></a></div></div>
+                <div class="m-g-hl m-center"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_imagination_title_2x.png" width="216" height="24" alt="Imagination is a gift." border="0" style="display:block;margin:0 auto"></div>
+                <div class="m-ct-gift"><div class="m-copy m-g-copy m-g-cta"><span><a href="${clicks.get('M_GIFTGUIDE_LINK')}" class="aapl-link " style="border:0;outline:0">Shop last-minute gifts<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" border="0" alt="" style="border:0;outline:0"></a></span></div></div>
+                <div class="m-g-img-2-container"><div class="m-g-img-2"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="414" height="146" alt="" border="0" style="display:block;margin:0 auto"></div></div>
+            </section>
+            <section class="m-ins-sec">
+                <div class="m-ins-hdln m-ctr"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_shop_catagory_title_2x.png" class="more" width="196" height="24" style="display:block;" border="0" alt="Shop by Category"></div><div class="m-ins-icn-sec"><div class="m-ins-box"><a href="${clicks.get('M_GIFTS_CAT_IMG')}"><img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_gifts_icon_2x.png" width="66" height="66" alt="" border="0"></a><span class="m-ins-cp"><a href="${clicks.get('M_GIFTS_CAT_LINK')}" class="aapl-link" style="border:0;outline:0;">Gifts</a></span></div><div class="m-ins-box"><a href="${clicks.get('M_APPLE_CAT_IMG')}"><img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_made_by_apple_icon_2x.png" width="66" height="66" alt="" border="0"></a><span class="m-ins-cp"><a href="${clicks.get('M_APPLE_CAT_LINK')}" class="aapl-link" style="border:0;outline:0;">Made by Apple</a></span></div><div class="m-ins-box"><a href="${clicks.get('M_NEW_CAT_IMG')}"><img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_whats_new_icon_2x.png" width="66" height="66" alt="" border="0"></a><span class="m-ins-cp"><a href="${clicks.get('M_NEW_CAT_LINK')}" class="aapl-link" style="border:0;outline:0;">What‘s New</a></span></div><div class="m-ins-box"><a href="${clicks.get('M_CASES_CAT_IMG')}"><img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_cases_protection_icon_2x.png" width="66" height="66" alt="" border="0"></a><span class="m-ins-cp"><a href="${clicks.get('M_CASES_CAT_LINK')}" class="aapl-link" style="border:0;outline:0;">Cases &amp; Protection</a></span></div><div class="m-ins-box"><a href="${clicks.get('M_GIFTCARDS_IMG')}"><img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_gift_cards_icon_2x.png" width="66" height="66" alt="" border="0"></a><span class="m-ins-cp"><a href="${clicks.get('M_GIFTCARDS_LINK')}" class="aapl-link" style="border:0;outline:0;">Gift Cards</a></span></div></div>
+            </section>
+        </div>
+    </div>
+    <div id="mobile-bottom" class="mobile mobile-bottom" style="width:0;height:0;max-height:0;float:left;overflow:hidden;display:none">
+        <div class="body" style="overflow:hidden">
+            <section class="m-bs"><div class="m-bs-tile m-bs-app"><div class="m-bs-shead"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_store_app_2x.png" width="141" height="20" alt="Apple Store app" border="0"></div><div class="m-copy-left m-bs-copy">It’s the easiest way to shop for the<br />perfect gift.</div><span><a href="${clicks.get('M_ASA_LINK')}" style="color:#08c;font-size:14px;letter-spacing:-0.009em;line-height:17px">Download<img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_007_alpha_2x.png" width="12" height="8" alt=""></a></span></div>
+                <div class="m-bs-tile m-bs-d"><div class="m-bs-shead"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/delivery_2x.png" width="192" height="20" alt="Free next-day delivery" border="0"></div><div class="m-copy-left m-bs-copy">On in-stock items ordered by 3:00 p.m.<br />on December 22. See checkout for<br />delivery dates.</div><span><a href="${clicks.get('M_SHIPPING_LINK')}" style="color:#08c;font-size:14px;letter-spacing:-0.009em;line-height:17px">Learn more<img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_007_alpha_2x.png" width="12" height="8" alt=""></a></span></div><div class="m-bs-tile m-bs-store"><div class="m-bs-shead"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/m_apple_store_2x.png" width="214" height="20" alt="Pick up at an Apple Store" border="0"></div><div class="m-copy-left m-bs-copy">Buy online and pick up available items.</div><span><a href="${clicks.get('M_VISIT_LINK')}" style="color:#08c;font-size:14px;letter-spacing:-0.009em;line-height:17px">Learn more<img class="more" src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_007_alpha_2x.png" width="12" height="8" alt=""></a></span></div>
+            </section>
+            <div class="divider"></div>
+            <section class="aapl-footer">
+                <div class="aapl-lowbrow">
+                    <a href="${clicks.get('M_BNAV_SHOP')}" style="border:0;outline:0">Shop Online</a>
+                    <span class="vertical-spacer">|</span>
+                    <a href="${clicks.get('M_BNAV_FIND')}" style="border:0;outline:0">Find a Store</a>
+                    <span class="vertical-spacer">|</span>
+                    <span class="format-detection">1&#8209;800&#8209;MY&#8209;APPLE</span>
+                </div>
+                <div class="divider"></div>
+                <div class="aapl-lowbrow"><a href="${clicks.get('M_BNAV_APP')}" style="border:0;outline:0">Get the Apple&nbsp;Store&nbsp;App</a></div>
+                <div class="divider"></div>
+                <div class="aapl-legal">
+                    <p><sup>*</sup> See checkout for delivery details.<br /><br />Prices are as of December 20, 2017, do not include taxes or shipping, are subject to change, and are listed in U.S. dollars.<br><br><a href="${clicks.get('M_DESP3_LINK')}" style="border:0;outline:0;text-decoration:none">Despicable Me 3</a> is available on iTunes. <a href="${clicks.get('M_DESP3_LINK')}" style="border:0;outline:0;text-decoration:none">Despicable Me 3</a> &copy; Universal Studios. All rights reserved.<br><br>TM and © ${global.copyrightYear} Apple Inc. 1 Infinite Loop,<br>MS 96-DM, Cupertino, CA 95014.<br><br><a href="http://www.apple.com/legal/" style="border:0;outline:0">All Rights Reserved</a><span class="vert">|</span><a href="http://www.apple.com/privacy/privacy-policy/" style="border:0;outline:0">Privacy Policy</a><span class="vert">|</span><a href="https://appleid.apple.com/" style="border:0;outline:0">My Apple ID</a><br><br>If you prefer not to receive commercial email from Apple, or if you’ve changed your email address, please <a href="${global.unsubscribeURL}" class="aapl-link" style="border:0;color:#666;outline:0;text-decoration:none"><span style="white-space:nowrap">click&nbsp;here</span></a>.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- DESKTOP VERSION -->
+
+    <div id="desktop" style="background-color:#fff;border-collapse:collapse;border-spacing:0;display:table;margin:auto 0;width:100%">
+        <!-- TABLE 1 -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" class="reset-ff" style="background-color:#fff;border-collapse:collapse;margin:0 auto">
+            <tr>
+                <td valign="top" align="center" style="border-collapse: collapse" class="aapl-container">
+                    <!-- TABLE 1A -->
+                    <!--[if !mso]><\!-->
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6">
+                    <!-- <![endif]-->
+                    <!--[if gte mso 9]>
+                    <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" style="margin:0 auto;background-color:#fff">
+                    <!-- <![endif]-->
+                        <tbody>
+                          <tr>
+                            <td height="22" bgcolor="#f2f1f6" style="background-color:#f2f1f6">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td bgcolor="#f2f1f6" style="background-color:#f2f1f6">
+                              <!-- TABLE 1B -->
+                              <!-- APPLE LOGO -->
+                              <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                                <tbody>
+                                  <tr>
+                                    <td style="padding-left:24px">
+                                      <picture>
+                                        <source media="(max-device-width: 568px)" srcset="data:">
+                                          <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/apple_888_alpha_2x.png" width="20" height="24" style="display:block;margin:0" class="show-me-always" border="0" alt="">
+                                      </picture>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>  <!-- TABLE 1B -->
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td height="60" bgcolor="#f2f1f6" style="background-color:#f2f1f6">&nbsp;</td>
+                          </tr>
+                            <!-- HEADLINE IMAGE -->
+                          <tr>
+                            <td height="89" bgcolor="#f2f1f6" align="center" style="background-color:#f2f1f6;padding-bottom:9px">
+                              <picture>
+                                <source media="(max-device-width: 568px)" srcset="data:">
+                                  <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/headline_2x.png" width="402" height="89" style="display:block;margin:0" class="show-me-always" border="0" alt="Last-minute shopping. Top-of-the-list gifts.">
+                              </picture>
+                            </td>
+                          </tr>
+                          <!-- HEADLINE IMAGE COPY-->
+                          <tr>
+                            <td bgcolor="#f2f1f6" align="center" style="background-color:#f2f1f6;padding:0;-webkit-font-smoothing:antialiased;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.45em;color:#333;font-size:18px;font-weight:400;letter-spacing:-0.029em">Free next-day delivery on in-stock items ordered<br />by 3:00 p.m. on December 22.<sup>*</sup>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="23" bgcolor="#f2f1f6" style="background-color:#f2f1f6">&nbsp;</td>
+                          </tr>
+                          <!-- SHOP BUTTON -->
+                          <tr>
+                            <td bgcolor="#f2f1f6" align="center" valign="top" style="background-color:#f2f1f6">
+                              <a href="${clicks.get('MAIN_GIFTGUIDE_BUTTON')}" style="display:inline-block;border:0;outline:0;text-decoration:none">
+                                <picture>
+                                  <source media="(max-device-width: 568px)" srcset="data:">
+                                    <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/shop_button_2x.png" width="210" height="36" style="display:block;margin:0" class="show-me-always" border="0" alt="Shop last-minute gifts">
+                                </picture>
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- CTA -->
+                          <tr>
+                            <td bgcolor="#f2f1f6" valign="top" align="center" class="sf_17" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;letter-spacing:0;line-height:25px;letter-spacing:.002em;margin:0;mso-line-height-rule:exactly;padding-top:11px">
+                              <a href="${clicks.get('MAIN_FINDSTORE_LINK')}" style="border:0;color:#0070c9;outline:0;text-decoration:none">Find a store<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" style="display:inline; margin:0" border="0" alt="">
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="34" bgcolor="#f2f1f6" style="background-color:#f2f1f6">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                      <!-- TABLE 2 -->
+                    <!--[if !mso]><\!-->
+                    <table width="100%" height="312" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" class="reset-ff" style="background-color:#fff;border-collapse:collapse;border-spacing:0;margin:0 auto;height:312px;max-height:312px">
+                        <!-- TOP GRAY SECTION -->
+                      <tr>
+                        <!-- LEFT INVISIBLE IMAGE -->
+                        <td bgcolor="#F2F1F6" align="right" height="504" style="background-color:#F2F1F6;height:504px;max-height:504px">
+                          <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="504" style="border:0;display:block;width:1px;height:323px;margin:0;outline:0" border="0" alt="">
+                        </td>
+                        <!-- HERO IMAGE -->
+                        <td width="712" height="532" rowspan="2" valign="top" style="width:712px;max-width:712px;height:532;max-height:532;padding:0;border-collapse:collapse;border-spacing:0">
+                          <a href="${clicks.get('ATV_IMG')}" style="display:block;border:0;outline:0;text-decoration:none;margin:0;padding:0">
+                            <picture>
+                              <source media="(max-device-width: 568px)" srcset="data:">
+                                <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/hero_fallback_2x.jpg" width="712" height="665" style="display:block;margin:0" class="show-me-always" border="0" alt="Apple TV 4K">
+                            </picture>
+                          </a>
+                        </td>
+                        <!-- RIGHT INVISIBLE IMAGE -->
+                        <td bgcolor="#F2F1F6" align="right" height="504" style="background-color:#F2F1F6;height:504px;max-height:504px">
+                          <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="504" style="border:0;display:block;width:1px;height:323px;margin:0;outline:0" border="0" alt="">
+                        </td>
+                      </tr>
+                        <!-- BOTTOM WHITE SECTION -->
+                      <tr>
+                        <!-- LEFT INVISIBLE IMAGE -->
+                        <td bgcolor="#FFF" align="right" style="background-color:#FFF;height:161px;max-height:161px">
+                          <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="161" style="border:0;display:block;width:1px;height:161px;margin:0;outline:0" border="0" alt="">
+                        </td>
+                        <!-- RIGHT INVISIBLE IMAGE -->
+                        <td bgcolor="#FFF" align="right" style="background-color:#FFF;height:161px;max-height:161px">
+                          <img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="161" style="border:0;display:block;width:1px;height:161px;margin:0;outline:0" border="0" alt="">
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- <![endif]-->
+                    <!--[if gte mso 9]>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto"><tbody><tr><td align="center" style="padding:0"><a href="${clicks.get('ATV_IMG')}" style="display:inline-block;border:0;outline:0;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/hero_fallback_2x.jpg" width="712" height="665" style="display:block;margin:0" class="show-me-always" border="0" alt="Apple TV 4K"></picture></a></td></tr></tbody></table>
+                    <![endif]-->
+
+
+
+                    <!-- TABLE 3 -->
+                    <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" style="margin:0 auto;background-color:#fff">
+                      <tbody>
+                        <tr>
+                          <td height="33">&nbsp;</td>
+                        </tr>
+                        <!-- SECOND HEADLINE COPY -->
+                        <tr>
+                          <td align="center" style="padding:9px 0 0">
+                            <div style="-webkit-font-smoothing:antialiased;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:25px;color:#333;font-size:18px;font-weight:400;letter-spacing:0.002em">A picture-perfect gift sharp to the last pixel.<br />Starting at $179
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- DOUBLE CTA -->
+                        <tr>
+                          <td>
+                            <table width="530" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                              <tr>
+                                <td width="45%" valign="top" align="right" class="sf_17" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;letter-spacing:0;line-height:25px;letter-spacing:.002em;margin:0;mso-line-height-rule:exactly;padding-top:13px;padding-right:37px">
+                                  <a href="${clicks.get('ATV_LINK')}" style="border:0;color:#0070c9;outline:0;text-decoration:none">Buy Apple TV 4K<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" style="display:inline; margin:0" border="0" alt="">
+                                  </a>
+                                </td>
+                                <td width="55%" valign="top" align="left" class="sf_17" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;letter-spacing:0;line-height:25px;letter-spacing:.002em;margin:0;mso-line-height-rule:exactly;padding-top:13px;white-space:nowrap">
+                                  <a href="${clicks.get('ATV_ACC_LINK')}" style="border:0;color:#0070c9;outline:0;text-decoration:none">Shop Apple TV accessories<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" style="display:inline; margin:0" border="0" alt="">
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" style="padding:9px 118px 0">
+                            <div style="-webkit-font-smoothing:antialiased;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:2.084;color:#555;font-size:12px;font-weight:400;letter-spacing:0.002em">
+                              <a href="${clicks.get('DESP3_LINK')}" style="border:0;color:#555;outline:0;text-decoration:none"><em>Despicable Me 3</em> is available on iTunes<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_333_alpha_2x.png" class="more" width="12" height="8" style="display:inline; margin:0" border="0" alt="">
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="70">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table><!-- TABLE 3 -->
+
+
+                    <!-- TABLE 4 -->
+                    <!--[if !mso]><\!-->
+                    <table width="100%" height="482" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" class="reset-ff" style="background-color:#fff;border-collapse:collapse;border-spacing:0;margin:0 auto;height:482px;max-height:482px">
+                      <tr>
+                        <!-- LEFT GRAY INVISIBLE IMAGE -->
+                        <td bgcolor="#F2F1F6" align="right" height="329" style="background-color:#F2F1F6;height:329px;max-height:329px"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="28" style="border:0;display:block;width:1px;height:329px;margin:0;outline:0" border="0" alt="">
+                        </td>
+                        <!-- SECOND HERO IMAGE -->
+                        <td width="712" height="482" rowspan="2" valign="top" style="width:712px;max-width:712px;height:482px;max-height:482px;padding:0;border-collapse:collapse;border-spacing:0">
+                          <a href="${clicks.get('WATCH_IMAGE')}" style="display:block;border:0;outline:0;text-decoration:none;margin:0;padding:0">
+                            <picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/watch_lte_fallback_2x.jpg" width="712" height="482" style="display:block;margin:0; border:0;outline:0" class="show-me-always" alt="Apple Watch Series 3">
+                            </picture>
+                          </a>
+                        </td>
+                        <td bgcolor="#F2F1F6" align="right" height="329" style="background-color:#F2F1F6;height:329px;max-height:329px">
+                        </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#FFF" align="right" style="background-color:#FFF;height:153px;max-height:153px"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="153" style="border:0;display:block;width:1px;height:153px;margin:0;outline:0" border="0" alt="">
+                          </td>
+                          <td bgcolor="#FFF" align="right" style="background-color:#FFF;height:153px;max-height:153px"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/i.png" width="1" height="153" style="border:0;display:block;width:1px;height:153px;margin:0;outline:0" border="0" alt="">
+                          </td>
+                        </tr>
+                      </table><!-- TABLE 4 -->
+
+                    <!-- <![endif]-->
+                    <!--[if gte mso 9]>
+                    <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tbody><tr><td align="center" style="padding:0;border:0;outline:0"><a href="${clicks.get('WATCH_IMAGE')}" style="display:inline-block;border:0;outline:0;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/watch_lte_fallback_2x.jpg" width="712" height="482" style="display:block;margin:0; border:0;outline:0" class="show-me-always" alt="Apple Watch Series 3"></picture></a></td></tr></tbody></table>
+                    <![endif]-->
+
+                      <!-- TABLE 5 -->
+                      <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                        <tbody>
+                          <tr>
+                            <td height="16">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="padding:0;-webkit-font-smoothing:antialiased;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:25px;color:#333;font-size:18px;font-weight:400;letter-spacing:-0.029em">Give a gift that gets them going.</td>
+                          </tr>
+                          <tr>
+                            <td height="14" style="line-height:0">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                                <tr>
+                                  <td width="51%" valign="top" align="right" class="sf_17" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;letter-spacing:0;line-height:25px;letter-spacing:.002em;margin:0;mso-line-height-rule:exactly"><a href="${clicks.get('WATCH_LINK')}" style="border:0;color:#0070c9;outline:0;text-decoration:none">Shop Apple Watch<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" style="display:inline; margin:0" border="0" alt=""></a>
+                                  </td>
+                                  <td width="49%" valign="top" align="left" class="sf_17" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;letter-spacing:0;line-height:25px;letter-spacing:.002em;margin:0;mso-line-height-rule: exactly;white-space:nowrap;padding-left:34px"><a href="${clicks.get('WATCH_ACC_LINK')}" style="border:0;color:#0070c9;outline:0;text-decoration:none">Shop bands<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" style="display:inline; margin:0" border="0" alt=""></a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="20">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table><!-- TABLE 5 -->
+
+                      <!-- TABLE 6 -->
+                      <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" style="margin:0 auto;background-color:#fff">
+                        <tbody>
+                          <tr><td height="51">&nbsp;</td></tr>
+                          <tr><td align="center"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/gifts_title_2x.png" width="287" height="28" style="border:0;display:block;margin:0;outline:0" border="0" alt="Gifts for every stocking."></picture></td></tr>
+                          <tr><td height="35">&nbsp;</td></tr>
+                          <tr><td align="center">
+                            <!-- FIRST ROW OF GREY PANELS -->
+                            <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" style="margin:0 auto;background-color:#fff;border-bottom:10px solid #fff">
+                              <tr><td align="center" valign="top" style="border-right:10px solid #fff">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6">
+                                  <tr><td align="center"><div class="accessories-1"><a href="${clicks.get('AIRPODS_IMG')}" class="aapl-link" style="border:0;outline:0">
+                                  <picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/airpods_2x.jpg" width="350" height="332" style="display:block;margin:0" border="0" alt="" />
+                                  </picture></a></div>
+                                  </td></tr>
+                                  <tr><td height="20" bgcolor="#f2f1f6" style="background-color:#f2f1f6">&nbsp;</td></tr>
+                                  <tr><td width="300" height="107" valign="top" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;color:#333;letter-spacing:-0.02em;text-align:center;"><div class="outlook-leading" style="padding:8px 0 11px"><a href="${clicks.get('AIRPODS_LINK')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">AirPods</a></div><a href="${clicks.get('AIRPODS_PRICE')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">$159.00</a></td></tr>
+                                </table>
+                                            </td>
+                                            <td align="center" valign="top">
+                                              <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6">
+                                                <tr>
+                                                  <td align="center">
+                                                    <div class="accessories-2"><a href="${clicks.get('BUCKLE_IMG')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">
+                                                      <picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/classic_buckle_2x.jpg" width="350" height="332" style="display:block;margin:0" border="0" alt="" /></picture></a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <tr><td height="20" bgcolor="#f2f1f6" style="background-color:#f2f1f6">&nbsp;</td></tr>
+                                                <tr><td width="300" height="107" valign="top" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;color:#333;letter-spacing:-0.02em;text-align:center;"><div class="outlook-leading" style="padding:8px 0 11px"><a href="${clicks.get('BUCKLE_LINK')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">Classic Buckle</a></div><a href="${clicks.get('BUCKLE_PRICE')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">$149.00</a></td></tr></table></td></tr></table>
+                                            <!-- SECOND ROW OF GREY PANELS -->
+                                            <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" style="margin:0 auto;background-color:#fff"><tr><td align="center" valign="top" style="border-right:10px solid #fff"><table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6"><tr><td align="center"><div class="accessories-1"><a href="${clicks.get('DJISPARKCOMBO_IMG')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/dji_spark_combo_2x.jpg" width="350" height="332" style="display:block;margin:0" border="0" alt="" /></picture></a></div></td></tr><tr><td width="300" height="107" valign="top" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;color:#333;letter-spacing:-0.03em; text-align:center"><div class="outlook-leading" style="padding:0 0 8px"><a href="${clicks.get('DJISPARKCOMBO_LINK')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">DJI Spark Drone Fly<br />More Combo</a></div><a href="${clicks.get('DJISPARKCOMBO_PRICE')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">$599.95</a></td></tr></table></td><td align="center" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6"><tr><td align="center"><div class="accessories-2"><a href="${clicks.get('R2D2_IMG')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/pinwheel_01_2x.jpg" width="350" height="332" style="display:block;margin:0" border="0" alt="" /></picture></a></div></td></tr><tr><td width="300" height="107" valign="top" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;color:#333;letter-spacing:-0.02em; text-align:center"><div class="outlook-leading" style="padding:0 0 11px"><a href="${clicks.get('R2D2_LINK')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">Sphero R2-D2</a></div><a href="${clicks.get('R2D2_PRICE')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">$129.95</a></td></tr></table></td></tr></table>
+
+                                            <!-- THIRD ROW OF GREY PANELS -->
+                                            <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" style="margin:0 auto;background-color:#fff;border-top:10px solid #FFF"><tr><td align="center" valign="top" style="border-right:10px solid #fff"><table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6"><tr><td align="center"><div class="accessories-1"><a href="${clicks.get('UE_IMG')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/pinwheel_05_2x.jpg" width="350" height="332" style="display:block;margin:0" border="0" alt="" /></picture></a></div></td></tr><tr><td width="300" height="107" valign="top" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;color:#333;letter-spacing:-0.03em; text-align:center"><div class="outlook-leading" style="padding:0 0 8px"><a href="${clicks.get('UE_LINK')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">UE Wonderboom<br />Speaker</a></div><a href="${clicks.get('UE_PRICE')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">$99.95</a></td></tr></table></td><td align="center" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f1f6" style="margin:0 auto;background-color:#f2f1f6"><tr><td align="center"><div class="accessories-2"><a href="${clicks.get('LIFEPRINT_IMG')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/lifeprint_short_2x.jpg" width="350" height="314" style="display:block;margin:0" border="0" alt="" /></picture></a></div><div class="outlook-leading" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;border:0;outline:0;font-size:12px;color:#e85d00;padding-bottom:5px;line-height:1em">Only at Apple</div></td></tr><tr><td width="300" height="107" valign="top" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:18px;line-height:26px;color:#333;letter-spacing:-0.02em; text-align:center"><div class="outlook-leading" style="padding:0 0 8px"><a href="${clicks.get('LIFEPRINT_LINK')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">Lifeprint 3x4.5 Photo and<br />Video Printer</a></div><a href="${clicks.get('LIFEPRINT_PRICE')}" class="aapl-link" style="border:0;outline:0; color:#333;text-decoration:none">$149.95</a></td></tr></table></td></tr></table></td></tr></tbody></table>
+
+
+
+
+                    <!-- TABLE 7 -->
+                    <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                        <tbody>
+                            <tr>
+                                <td height="350" valign="top" align="center" style="border-collapse:collapse;border-top:10px solid #FFF">
+                                    <table width="712" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto">
+                                      <tbody>
+                                          <tr>
+                                            <td width="304" valign="top">
+                                              <table width="304" height="350" valign="top" border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="144" bgcolor="#f2f1f6" style="background-color:#F2F1F6">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td valign="top" style="background-color:#F2F1F6">
+                                                        <div class="image retina-trade-in-h-left" style="width:304px;font-size:0"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/imagination_title_2x.png" width="304" height="28" style="border:0;display:block;margin:0;outline:0" border="0" alt="Imagination is a gift."></picture></div></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td height="178" valign="top" class="copy-17" style="-webkit-font-smoothing:antialiased;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;letter-spacing:0;line-height:26px;margin:0;mso-line-height-rule:exactly;padding-bottom:0;padding-left:55px;background-color:#F2F1F6"><a href="${clicks.get('GIFTGUIDE_LINK')}" class="aapl-link " style="border:0;color:#0070c9;display:inline-block;outline:0;text-decoration:none">Shop last-minute gifts<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/34_chevron_007_alpha_2x.png" class="more" width="12" height="10" style="border:0;display: inline; margin:0;outline:0" border="0" alt=""></a></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                            </td>
+                                            <td valign="top"><div class="image retina-trade-in-hero" style="width:408px;font-size:0"><a href="${clicks.get('GIFTGUIDE_IMG')}" style="border:0;color:#0070c9;display:inline-block;outline:0;text-decoration:none"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/imagination_2x.jpg" width="408" height="350" style="border:0;display:block;margin:0;outline:0" border="0" alt=""></picture></a></div></td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>  <!-- TABLE 7 -->
+
+                    <!-- TABLE 8 -->
+                    <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table width="712" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                                    <tbody>
+                                        <tr><td height="78">&nbsp;</td></tr>
+                                        <tr>
+                                            <td align="center"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/shop_category_title_2x.png" width="287" height="28" style="border:0;display:block;margin:0;outline:0" border="0" alt="Shop by Category"></picture></td>
+                                        </tr>
+                                        <tr><td height="40">&nbsp;</td></tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                           <td>
+                            <table width="660" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto">
+                                <tr>
+                                    <td width="69" valign="top">
+                                        <table width="69" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td width="69" class="vp_01-img" align="center" style="padding:0"><picture><source media="(max-device-width: 568px)" srcset="data:"><a href="${clicks.get('GIFTS_CAT_IMG')}" style="display:inline-block"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/gifts_icon_2x.png" width="69" height="69" style="display:block;margin:0" border="0" alt="" /></a></picture></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.002em"><a href="${clicks.get('GIFTS_CAT_LINK')}" class="aapl-link " style="border:0;color:#333;display:inline-block;outline:0;text-decoration:none;white-space:nowrap">Gifts</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="30" valign="top"></td>
+                                    <td width="154" valign="top">
+                                        <table width="154" cellpadding="0" cellspacing="0" border="0" align="center">
+                                            <tr>
+                                                <td width="154" class="vp_01-img" align="center" style="padding:0"><a href="${clicks.get('APPLE_CAT_IMG')}" style="display:inline-block"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/made_by_apple_icon_2x.png" width="69" height="69" style="display:block;margin:0" border="0" alt="" /></picture></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                 <td align="center" style="padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.002em"><a href="${clicks.get('APPLE_CAT_LINK')}" class="aapl-link " style="border:0;color:#333;display:inline-block;outline:0;text-decoration:none;white-space:nowrap">Made by Apple</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="18"></td>
+                                    <td width="104" valign="top">
+                                        <table width="104" cellpadding="0" cellspacing="0" border="0" align="center">
+                                            <tr>
+                                                <td width="104" class="vp_01-img" align="center" style="padding:0"><picture><source media="(max-device-width: 568px)" srcset="data:"><a href="${clicks.get('NEW_CAT_IMG')}" style="display:inline-block"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/whats_new_icon_2x.png" width="69" height="69" style="display:block;margin:0" border="0" alt="" /></a></picture></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                 <td align="center" style="padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.002em"><a href="${clicks.get('NEW_CAT_LINK')}" class="aapl-link " style="border:0;color:#333;display:inline-block;outline:0;text-decoration:none;white-space:nowrap">What’s New</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="18"></td>
+                                    <td width="156" valign="top">
+                                        <table width="156" cellpadding="0" cellspacing="0" border="0" align="center">
+                                            <tr>
+                                                <td width="156" class="vp_01-img" align="center" style="padding:0"><a href="${clicks.get('CASES_CAT_IMG')}" style="display:inline-block"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/cases_protection_icon_2x.png" width="69" height="69" style="display:block;margin:0" border="0" alt="" /></picture></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                 <td align="center" style="padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.002em"><a href="${clicks.get('CASES_CAT_LINK')}" class="aapl-link " style="border:0;color:#333;display:inline-block;outline:0;text-decoration:none;white-space:nowrap">Cases &amp; Protection</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="27" valign="top"></td>
+                                    <td width="84" valign="top">
+                                        <table width="84" cellpadding="0" cellspacing="0" border="0" align="right">
+                                            <tr>
+                                                <td width="84" class="vp_01-img" align="center" style="padding:0"><a href="${clicks.get('GIFTCARDS_IMG')}" style="display:inline-block"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/gift_cards_icon_2x.png" width="69" height="69" style="display:block;margin:0" border="0" alt="" /></picture></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                 <td align="center" style="padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.002em"><a href="${clicks.get('GIFTCARDS_LINK')}" class="aapl-link " style="border:0;color:#333;display:inline-block;outline:0;text-decoration:none;white-space:nowrap">Gift Cards</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr><td colspan="5" height="70">&nbsp;</td></tr>
+                            </table>
+                           </td>
+                       </tr>
+                   </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f2f2" class="reset-ff" style="background-color:#f2f2f2;border-collapse:collapse;margin:0 auto">
+            <tr><td height="20">&nbsp;</td></tr>
+            <tr>
+                <td bgcolor="#f2f2f2">
+                    <table width="660" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f2f2" style="background-color:#f2f2f2;border-collapse:collapse;margin:0 auto;border: 0">
+                        <tbody>
+                            <tr>
+                               <td bgcolor="#f2f2f2">
+                                    <table width="660" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f2f2" style="margin:0 auto;border: 0">
+                                        <tr>
+                                            <td width="195" valign="top" style="padding-top:30px;padding-right:20px">
+                                                <table width="195" cellpadding="0" cellspacing="0" border="0" align="center">
+                                                    <tr>
+                                                        <td width="195" class="vp_01-img" align="left" style="padding-left:5px;padding-top:1px;"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/store_app_2x.png" width="138" height="20" style="display:block;margin:0" border="0" alt="Apple Store app" /></picture></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" style="padding:8px 10px 12px 7px">
+                                                            <div class="copy outlook-leading" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.1"><span>It’s the easiest way to shop for the perfect gift.</span></div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="195" align="left" valign="top" class="outlook-leading" style="padding-left:7px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased;text-align:left; letter-spacing:-.1"><a href="${clicks.get('ASA_LINK')}" class="aapl-link" style="color:#0070c9; text-decoration:none">Download<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_007_alpha_2x.png" class="more" width="12" height="8" style="display:inline; margin:0" border="0" alt="" /></a></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="30"></td>
+                                            <td width="230" valign="top" style="padding-top:30px">
+                                                <table width="230" cellpadding="0" cellspacing="0" border="0" align="center">
+                                                    <tr>
+                                                        <td width="230" class="vp_02-img" align="left" style="padding-top:1px;"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/delivery_2x.png" width="192" height="20" style="display:block;margin:0" border="0" alt="Free next-day delivery" /></picture></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" style="padding:8px 16px 12px 0"><div class="copy outlook-leading" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.1"><span>On in-stock items ordered by<br />3:00&nbsp;p.m. on December 22.<br />See checkout for delivery dates.</span></div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="230" align="left" valign="top" class="outlook-leading" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased;text-align:left; letter-spacing:-0.01em; letter-spacing:-.1"><a href="${clicks.get('SHIPPING_LINK')}" class="aapl-link" style="color:#0070c9; text-decoration:none">Learn more<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_007_alpha_2x.png" class="more" width="12" height="8" style="display:inline; margin:0" border="0" alt="" /></a></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="38"></td>
+                                            <td width="192" valign="top" style="padding-top:30px">
+                                                <table width="192" cellpadding="0" cellspacing="0" border="0" align="center">
+                                                    <tr><td class="vp_03-img" align="left" style="padding:0 0 0 1px"><picture><source media="(max-device-width: 568px)" srcset="data:"><img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/apple_store_2x.png" width="214" height="20" style="display:block;margin:0" border="0" alt="Pick up at an Apple Store" /></picture></td></tr>
+                                                    <tr><td align="left" style="padding:8px 10px 10px 2px"><div class="outlook-leading" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased;color:#333;letter-spacing:-.1"><span>Buy online and pick up<br />available items.</span></div></td></tr>
+                                                    <tr><td width="192" align="left" valign="top" class="outlook-leading" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased;text-align:left;padding-left:2px; letter-spacing:-.1"><a href="${clicks.get('VISIT_LINK')}" class="aapl-link" style="color:#0070c9;text-decoration:none">Learn more<img src="https://images.apple.com/dm/us/17/26890582-E0D4-4C22-9D55-7BCB35815D79/i/28_chevron_007_alpha_2x.png" class="more" width="12" height="8" style="display:inline; margin:0" border="0" alt="" /></a></td></tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+              <td valign="top" align="center" class="footer-wrapper" style="margin:0 auto">
+                <table width="660" class="default-table-width footer-body" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f2f2f2">
+                  <tr>
+                    <td height="34"></td>
+                  </tr>
+                  <tr>
+                        <td width="660" valign="top" align="center" class="desktop-keyline" style="border-color: #d6d6d6; border-top-style: solid; border-top-width:1px;font-size: 1px; line-height: 1px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                    <td height="16"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" height="15" id="aapl-eyebrow" class="copy-12" style="-webkit-font-smoothing:antialiased;color: #888; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px;font-weight:400;letter-spacing:0;line-height: 18px; margin:0;mso-line-height-rule:exactly;padding:0;padding-top: 0">
+                      <a class="aapl-link footer-link" href="${clicks.get('BNAV_SHOP')}" style="border:0;color: #888; display:inline-block;outline:0;text-decoration:none">
+                  Shop Online
+                </a>
+                 &nbsp;&nbsp;&nbsp;<span class="vertical-spacer" style="color: #d5d5d5">|</span>&nbsp;&nbsp;&nbsp;
+                      <a class="aapl-link footer-link" href="${clicks.get('BNAV_FIND')}" style="border:0;color: #888; display:inline-block;outline:0;text-decoration:none">
+                  Find a Store
+                </a>
+                 &nbsp;&nbsp;&nbsp;<span class="vertical-spacer" style="color: #d5d5d5">|</span>&nbsp;&nbsp;&nbsp;
+                      <span class="format-detection" style="color: #888">1&#8209;800&#8209;MY&#8209;APPLE</span> &nbsp;&nbsp;&nbsp;<span class="vertical-spacer" style="color: #d5d5d5">|</span>&nbsp;&nbsp;&nbsp;
+                      <a class="aapl-link footer-link" href="${clicks.get('BNAV_APP')}" style="border:0;color: #888; display:inline-block;outline:0;text-decoration:none">
+                        Get the Apple&nbsp;Store&nbsp;App
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- KEYLINE -->
+                  <tr>
+                    <td height="20"></td>
+                  </tr>
+                  <tr>
+                       <td width="660" valign="top" align="center" class="desktop-keyline" style="border-color: #d6d6d6; border-top-style: solid; border-top-width:1px;font-size: 1px; line-height: 1px">&nbsp;</td>
+                   </tr>
+                  <tr>
+                    <td height="8"></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <!--footnote component-->
+                      <table width="646" class="default-footer-table-width" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <tr>
+                          <td align="left" class="copy-legal" id="aapl-footer" style="-webkit-font-smoothing:antialiased;color:#888;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 11px; font-weight:400;line-height: 1em; letter-spacing: -0.014em; margin:0;mso-line-height-rule:exactly;padding:0 0 30px 0">
+                            <p>
+                                <br>
+                                <span style="-webkit-font-smoothing:antialiased;color:#888;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 11px; font-weight:400;line-height: 0em; margin:0;mso-line-height-rule: exactly"><sup>*</sup> See checkout for delivery details.</span>
+                                <br /><br />
+                                <span style="-webkit-font-smoothing:antialiased;color:#888;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 11px; font-weight:400;line-height: 0em; margin:0;mso-line-height-rule: exactly">Prices are as of December 20, 2017, do not include taxes or shipping, are subject to change, and are listed in U.S. dollars.</span>
+                                <br /><br />
+                                <span style="-webkit-font-smoothing:antialiased;color:#888;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 11px; font-weight:400;line-height: 0em; margin:0;mso-line-height-rule: exactly"><a href="${clicks.get('DESP3_LINK')}" style="border:0;color: #555;font-size:11px;display:inline-block;outline:0;text-decoration:none">Despicable Me 3</a> is available on iTunes. <a href="${clicks.get('DESP3_LINK')}" style="border:0;color: #555;font-size:11px;display:inline-block;outline:0;text-decoration:none">Despicable Me 3</a> &copy; 2017 Universal Studios. All rights reserved.</span>
+                                <br><br>
+                                <span style="-webkit-font-smoothing:antialiased;color:#888;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 11px; font-weight:400;line-height: 0em; margin:0;mso-line-height-rule: exactly">TM and © ${global.copyrightYear} Apple Inc. <a style="color:#888;cursor:text;text-decoration:none">1 Infinite Loop</a>, MS 96-DM, Cupertino, CA 95014.</span>
+                                <br><br>
+
+                                <a href="http://www.apple.com/legal/" class="aapl-link legal-link" style="border:0;color: #555; display:inline-block;outline:0;font-size: 11px;text-decoration: none"><span style="color: #555;">All Rights Reserved</span></a> &nbsp; <span class="vertical-spacer" style="color: #d5d5d5">|</span> &nbsp;
+
+                                <a href="http://www.apple.com/privacy/privacy-policy/" class="aapl-link legal-link" style="border:0;color: #555; display:inline-block;outline:0;font-size: 11px;text-decoration:none">Privacy Policy</a> &nbsp; <span class="vertical-spacer" style="color: #d5d5d5">|</span> &nbsp;
+                                <a href="https://appleid.apple.com/" class="aapl-link legal-link" style="border:0;color: #555; display:inline-block;outline:0;font-size: 11px;text-decoration:none">My Apple ID</a>
+                                <br><br>
+                                <span style="-webkit-font-smoothing:antialiased;color:#888;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 11px; font-weight:400;letter-spacing:0;line-height: 0em; margin:0;mso-line-height-rule:exactly;padding:0 0 30px">If you prefer not to receive commercial email from Apple, or if you’ve changed your email address, please</span> <a href="${global.unsubscribeURL}" style="border:0;color: #555; display:inline-block;outline:0;text-decoration:none">click here</a>.
+                          </p>
+                        </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
